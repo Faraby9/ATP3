@@ -8,6 +8,7 @@ var login = require('./controllers/login');
 var home = require('./controllers/home');
 var user = require('./controllers/user');
 var logout = require('./controllers/logout');
+var register = require('./controllers/register');
 var app = express();
 
 
@@ -20,8 +21,9 @@ app.use(expSession({secret:'my top secret value', saveUninitialized:true, resave
 app.use(cookieParser());
 app.use('/login', login);
 app.use('/home', home);
-app.use('/user', user);
+//app.use('/user', user);
 app.use('/logout', logout);
+app.use('/register',register);
 
 
 //ROUTER

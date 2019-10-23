@@ -38,13 +38,13 @@ module.exports = {
 	},
 	insert: function(user, callback){
 
-		var sql ="insert into user values('', '"+ user.username+"', '"+user.password+"')";
+		var sql ="insert into user values('', '"+ register.username+"', '"+register.password+"')";
 		db.execute(sql, function(status){
 			callback(status);
 		});
 	},
-	update: function(user, callback){
-		var sql ="update user set username='"+ user.username+"', password='"+user.password+"' where id="+user.id;
+	update: function(register, callback){
+		var sql ="update user set username='"+register.username+"', password='"+register.password+"' where id="+register.id;
 		
 		console.log(sql);
 
